@@ -2,7 +2,6 @@ import 'package:fake_store_app/presentation/bloc/category/category_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:responsive_framework/responsive_breakpoints.dart';
 
 import '../../../data/remote/product_datasource_impl.dart';
 import '../../../data/repository/product_repository_impl.dart';
@@ -36,7 +35,7 @@ class CategoryScreen extends StatelessWidget {
               staggeredTileBuilder: (index) => const StaggeredTile.fit(1),
               mainAxisSpacing: 8,
               crossAxisSpacing: 8,
-              crossAxisCount: ResponsiveBreakpoints.of(context).isDesktop ? 4 : 2,
+              crossAxisCount: 2,
               itemCount: categories.length,
               itemBuilder: (context, index) => Card(
                 shape: const RoundedRectangleBorder(
